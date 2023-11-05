@@ -15,7 +15,7 @@ describe('NumberOfHours e2e test', () => {
   const numberOfHoursPageUrlPattern = new RegExp('/number-of-hours(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const numberOfHoursSample = { month: 'insignificant sans', externalAgentDailyHoursAvg: 8451.89 };
+  const numberOfHoursSample = { month: 'whereas unexpectedly schmooze', externalAgentDailyHoursAvg: 1456.19 };
 
   let numberOfHours;
 
@@ -162,53 +162,53 @@ describe('NumberOfHours e2e test', () => {
     });
 
     it('should create an instance of NumberOfHours', () => {
-      cy.get(`[data-cy="month"]`).type('below pike past');
-      cy.get(`[data-cy="month"]`).should('have.value', 'below pike past');
+      cy.get(`[data-cy="month"]`).type('certainly symmetry whether');
+      cy.get(`[data-cy="month"]`).should('have.value', 'certainly symmetry whether');
 
-      cy.get(`[data-cy="externalAgentDailyHoursAvg"]`).type('26124.94');
-      cy.get(`[data-cy="externalAgentDailyHoursAvg"]`).should('have.value', '26124.94');
+      cy.get(`[data-cy="externalAgentDailyHoursAvg"]`).type('16121.57');
+      cy.get(`[data-cy="externalAgentDailyHoursAvg"]`).should('have.value', '16121.57');
 
-      cy.get(`[data-cy="dailyHourAvg"]`).type('26350.38');
-      cy.get(`[data-cy="dailyHourAvg"]`).should('have.value', '26350.38');
+      cy.get(`[data-cy="dailyHourAvg"]`).type('15697.96');
+      cy.get(`[data-cy="dailyHourAvg"]`).should('have.value', '15697.96');
 
-      cy.get(`[data-cy="avgHoursToAnswerCalls"]`).type('31992');
-      cy.get(`[data-cy="avgHoursToAnswerCalls"]`).should('have.value', '31992');
+      cy.get(`[data-cy="avgHoursToAnswerCalls"]`).type('24763');
+      cy.get(`[data-cy="avgHoursToAnswerCalls"]`).should('have.value', '24763');
 
-      cy.get(`[data-cy="totalHoursToAnswerCalls"]`).type('14882.82');
-      cy.get(`[data-cy="totalHoursToAnswerCalls"]`).should('have.value', '14882.82');
+      cy.get(`[data-cy="totalHoursToAnswerCalls"]`).type('2537.85');
+      cy.get(`[data-cy="totalHoursToAnswerCalls"]`).should('have.value', '2537.85');
 
-      cy.get(`[data-cy="totalReceivedCalls"]`).type('9746');
-      cy.get(`[data-cy="totalReceivedCalls"]`).should('have.value', '9746');
+      cy.get(`[data-cy="totalReceivedCalls"]`).type('2895');
+      cy.get(`[data-cy="totalReceivedCalls"]`).should('have.value', '2895');
 
-      cy.get(`[data-cy="totalAttendedCalls"]`).type('9092');
-      cy.get(`[data-cy="totalAttendedCalls"]`).should('have.value', '9092');
+      cy.get(`[data-cy="totalAttendedCalls"]`).type('9869');
+      cy.get(`[data-cy="totalAttendedCalls"]`).should('have.value', '9869');
 
-      cy.get(`[data-cy="attendedCallsPercentage"]`).type('289.94');
-      cy.get(`[data-cy="attendedCallsPercentage"]`).should('have.value', '289.94');
+      cy.get(`[data-cy="attendedCallsPercentage"]`).type('12314.56');
+      cy.get(`[data-cy="attendedCallsPercentage"]`).should('have.value', '12314.56');
 
-      cy.get(`[data-cy="avgDailyAttendedCalls"]`).type('10253.25');
-      cy.get(`[data-cy="avgDailyAttendedCalls"]`).should('have.value', '10253.25');
+      cy.get(`[data-cy="avgDailyAttendedCalls"]`).type('14944.03');
+      cy.get(`[data-cy="avgDailyAttendedCalls"]`).should('have.value', '14944.03');
 
-      cy.get(`[data-cy="avgDailyAttendedCallsByExternal"]`).type('18904.56');
-      cy.get(`[data-cy="avgDailyAttendedCallsByExternal"]`).should('have.value', '18904.56');
+      cy.get(`[data-cy="avgDailyAttendedCallsByExternal"]`).type('8419.79');
+      cy.get(`[data-cy="avgDailyAttendedCallsByExternal"]`).should('have.value', '8419.79');
 
-      cy.get(`[data-cy="avgDailyAttendedCallsByExternalByDay"]`).type('10630.43');
-      cy.get(`[data-cy="avgDailyAttendedCallsByExternalByDay"]`).should('have.value', '10630.43');
+      cy.get(`[data-cy="avgDailyAttendedCallsByExternalByDay"]`).type('15811.54');
+      cy.get(`[data-cy="avgDailyAttendedCallsByExternalByDay"]`).should('have.value', '15811.54');
 
-      cy.get(`[data-cy="avgDailyAttendedCallsByInternal"]`).type('31250.35');
-      cy.get(`[data-cy="avgDailyAttendedCallsByInternal"]`).should('have.value', '31250.35');
+      cy.get(`[data-cy="avgDailyAttendedCallsByInternal"]`).type('26574.18');
+      cy.get(`[data-cy="avgDailyAttendedCallsByInternal"]`).should('have.value', '26574.18');
 
-      cy.get(`[data-cy="totalReceivedChats"]`).type('21999');
-      cy.get(`[data-cy="totalReceivedChats"]`).should('have.value', '21999');
+      cy.get(`[data-cy="totalReceivedChats"]`).type('28533');
+      cy.get(`[data-cy="totalReceivedChats"]`).should('have.value', '28533');
 
-      cy.get(`[data-cy="totalAttendedChats"]`).type('21693');
-      cy.get(`[data-cy="totalAttendedChats"]`).should('have.value', '21693');
+      cy.get(`[data-cy="totalAttendedChats"]`).type('19077');
+      cy.get(`[data-cy="totalAttendedChats"]`).should('have.value', '19077');
 
-      cy.get(`[data-cy="totalReceivedMails"]`).type('10257');
-      cy.get(`[data-cy="totalReceivedMails"]`).should('have.value', '10257');
+      cy.get(`[data-cy="totalReceivedMails"]`).type('7265');
+      cy.get(`[data-cy="totalReceivedMails"]`).should('have.value', '7265');
 
-      cy.get(`[data-cy="totalAttendedMails"]`).type('15772');
-      cy.get(`[data-cy="totalAttendedMails"]`).should('have.value', '15772');
+      cy.get(`[data-cy="totalAttendedMails"]`).type('12079');
+      cy.get(`[data-cy="totalAttendedMails"]`).should('have.value', '12079');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

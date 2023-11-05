@@ -8,7 +8,8 @@
       "entities": {
         "main": "Entities",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
-        "numberOfHours": "Number Of Hours"
+        "numberOfHours": "Number Of Hours",
+        "dailyCalls": "Daily Calls"
       },
       "account": {
         "main": "Account",

@@ -2060,13 +2060,11 @@ class NumberOfHoursResourceIT {
         partialUpdatedNumberOfHours
             .externalAgentDailyHoursAvg(UPDATED_EXTERNAL_AGENT_DAILY_HOURS_AVG)
             .dailyHourAvg(UPDATED_DAILY_HOUR_AVG)
-            .totalReceivedCalls(UPDATED_TOTAL_RECEIVED_CALLS)
+            .avgHoursToAnswerCalls(UPDATED_AVG_HOURS_TO_ANSWER_CALLS)
             .attendedCallsPercentage(UPDATED_ATTENDED_CALLS_PERCENTAGE)
-            .avgDailyAttendedCalls(UPDATED_AVG_DAILY_ATTENDED_CALLS)
-            .avgDailyAttendedCallsByExternalByDay(UPDATED_AVG_DAILY_ATTENDED_CALLS_BY_EXTERNAL_BY_DAY)
-            .avgDailyAttendedCallsByInternal(UPDATED_AVG_DAILY_ATTENDED_CALLS_BY_INTERNAL)
+            .avgDailyAttendedCallsByExternal(UPDATED_AVG_DAILY_ATTENDED_CALLS_BY_EXTERNAL)
             .totalReceivedChats(UPDATED_TOTAL_RECEIVED_CHATS)
-            .totalAttendedChats(UPDATED_TOTAL_ATTENDED_CHATS);
+            .totalAttendedMails(UPDATED_TOTAL_ATTENDED_MAILS);
 
         restNumberOfHoursMockMvc
             .perform(
@@ -2083,20 +2081,20 @@ class NumberOfHoursResourceIT {
         assertThat(testNumberOfHours.getMonth()).isEqualTo(DEFAULT_MONTH);
         assertThat(testNumberOfHours.getExternalAgentDailyHoursAvg()).isEqualTo(UPDATED_EXTERNAL_AGENT_DAILY_HOURS_AVG);
         assertThat(testNumberOfHours.getDailyHourAvg()).isEqualTo(UPDATED_DAILY_HOUR_AVG);
-        assertThat(testNumberOfHours.getAvgHoursToAnswerCalls()).isEqualTo(DEFAULT_AVG_HOURS_TO_ANSWER_CALLS);
+        assertThat(testNumberOfHours.getAvgHoursToAnswerCalls()).isEqualTo(UPDATED_AVG_HOURS_TO_ANSWER_CALLS);
         assertThat(testNumberOfHours.getTotalHoursToAnswerCalls()).isEqualTo(DEFAULT_TOTAL_HOURS_TO_ANSWER_CALLS);
-        assertThat(testNumberOfHours.getTotalReceivedCalls()).isEqualTo(UPDATED_TOTAL_RECEIVED_CALLS);
+        assertThat(testNumberOfHours.getTotalReceivedCalls()).isEqualTo(DEFAULT_TOTAL_RECEIVED_CALLS);
         assertThat(testNumberOfHours.getTotalAttendedCalls()).isEqualTo(DEFAULT_TOTAL_ATTENDED_CALLS);
         assertThat(testNumberOfHours.getAttendedCallsPercentage()).isEqualTo(UPDATED_ATTENDED_CALLS_PERCENTAGE);
-        assertThat(testNumberOfHours.getAvgDailyAttendedCalls()).isEqualTo(UPDATED_AVG_DAILY_ATTENDED_CALLS);
-        assertThat(testNumberOfHours.getAvgDailyAttendedCallsByExternal()).isEqualTo(DEFAULT_AVG_DAILY_ATTENDED_CALLS_BY_EXTERNAL);
+        assertThat(testNumberOfHours.getAvgDailyAttendedCalls()).isEqualTo(DEFAULT_AVG_DAILY_ATTENDED_CALLS);
+        assertThat(testNumberOfHours.getAvgDailyAttendedCallsByExternal()).isEqualTo(UPDATED_AVG_DAILY_ATTENDED_CALLS_BY_EXTERNAL);
         assertThat(testNumberOfHours.getAvgDailyAttendedCallsByExternalByDay())
-            .isEqualTo(UPDATED_AVG_DAILY_ATTENDED_CALLS_BY_EXTERNAL_BY_DAY);
-        assertThat(testNumberOfHours.getAvgDailyAttendedCallsByInternal()).isEqualTo(UPDATED_AVG_DAILY_ATTENDED_CALLS_BY_INTERNAL);
+            .isEqualTo(DEFAULT_AVG_DAILY_ATTENDED_CALLS_BY_EXTERNAL_BY_DAY);
+        assertThat(testNumberOfHours.getAvgDailyAttendedCallsByInternal()).isEqualTo(DEFAULT_AVG_DAILY_ATTENDED_CALLS_BY_INTERNAL);
         assertThat(testNumberOfHours.getTotalReceivedChats()).isEqualTo(UPDATED_TOTAL_RECEIVED_CHATS);
-        assertThat(testNumberOfHours.getTotalAttendedChats()).isEqualTo(UPDATED_TOTAL_ATTENDED_CHATS);
+        assertThat(testNumberOfHours.getTotalAttendedChats()).isEqualTo(DEFAULT_TOTAL_ATTENDED_CHATS);
         assertThat(testNumberOfHours.getTotalReceivedMails()).isEqualTo(DEFAULT_TOTAL_RECEIVED_MAILS);
-        assertThat(testNumberOfHours.getTotalAttendedMails()).isEqualTo(DEFAULT_TOTAL_ATTENDED_MAILS);
+        assertThat(testNumberOfHours.getTotalAttendedMails()).isEqualTo(UPDATED_TOTAL_ATTENDED_MAILS);
     }
 
     @Test
