@@ -1,0 +1,39 @@
+{
+  "dashboardApp": {
+    "numberOfHours": {
+      "home": {
+        "title": "Number Of Hours",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Number Of Hours",
+        "createOrEditLabel": "Crear o editar Number Of Hours",
+        "notFound": "Ningún Number Of Hours encontrado"
+      },
+      "created": "Un nuevo Number Of Hours ha sido creado con el identificador {{ param }}",
+      "updated": "Un Number Of Hours ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Number Of Hours ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Number Of Hours {{ id }}?"
+      },
+      "detail": {
+        "title": "Number Of Hours"
+      },
+      "id": "ID",
+      "month": "Month",
+      "externalAgentDailyHoursAvg": "External Agent Daily Hours Avg",
+      "dailyHourAvg": "Daily Hour Avg",
+      "avgHoursToAnswerCalls": "Avg Hours To Answer Calls",
+      "totalHoursToAnswerCalls": "Total Hours To Answer Calls",
+      "totalReceivedCalls": "Total Received Calls",
+      "totalAttendedCalls": "Total Attended Calls",
+      "attendedCallsPercentage": "Attended Calls Percentage",
+      "avgDailyAttendedCalls": "Avg Daily Attended Calls",
+      "avgDailyAttendedCallsByExternal": "Avg Daily Attended Calls By External",
+      "avgDailyAttendedCallsByExternalByDay": "Avg Daily Attended Calls By External By Day",
+      "avgDailyAttendedCallsByInternal": "Avg Daily Attended Calls By Internal",
+      "totalReceivedChats": "Total Received Chats",
+      "totalAttendedChats": "Total Attended Chats",
+      "totalReceivedMails": "Total Received Mails",
+      "totalAttendedMails": "Total Attended Mails"
+    }
+  }
+}
