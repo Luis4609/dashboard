@@ -104,6 +104,17 @@ export const DailyCalls = () => {
             &nbsp;
             <Translate contentKey="dashboardApp.dailyCalls.home.createLabel">Create new Daily Calls</Translate>
           </Link>
+          <Button
+            className="btn btn-primary jh-create-entity"
+            id="jh-upload-entity"
+            tag={Link}
+            to={`/daily-calls/upload`}
+            // color="success"
+            // size="sm"
+            data-cy="entityUploadButton"
+          >
+            <Translate contentKey="dashboardApp.dailyCalls.home.uploadLabel">Upload excel file</Translate>
+          </Button>
         </div>
       </h2>
       <div className="table-responsive">

@@ -6,7 +6,8 @@
         "refreshListLabel": "Refrescar lista",
         "createLabel": "Crear nuevo Daily Calls",
         "createOrEditLabel": "Crear o editar Daily Calls",
-        "notFound": "Ningún Daily Calls encontrado"
+        "notFound": "Ningún Daily Calls encontrado",
+        "uploadLabel": "Subir excel"
       },
       "created": "Un nuevo Daily Calls ha sido creado con el identificador {{ param }}",
       "updated": "Un Daily Calls ha sido actualizado con el identificador {{ param }}",
