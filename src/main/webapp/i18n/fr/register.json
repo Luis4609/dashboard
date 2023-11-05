@@ -13,7 +13,7 @@
           "pattern": "Votre nom d'utilisateur est invalide."
         }
       },
-      "success": "<strong>Compte enregistré !</strong> Merci de vérifier votre email de confirmation.",
+      "success": "<strong>Compte enregistré !</strong> Veuillez en informer votre administrateur afin qu'il puisse activer votre compte.",
       "error": {
         "fail": "<strong>Compte non créé !</strong> Merci d'essayer à nouveau plus tard.",
         "userexists": "<strong>Ce compte utilisateur existe déjà !</strong> Veuillez en choisir un autre.",
