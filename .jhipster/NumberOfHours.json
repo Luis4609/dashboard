@@ -1,0 +1,81 @@
+{
+  "changelogDate": "20231101142623",
+  "dto": "mapstruct",
+  "entityTableName": "number_of_hours",
+  "fields": [
+    {
+      "fieldName": "month",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "externalAgentDailyHoursAvg",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dailyHourAvg",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "avgHoursToAnswerCalls",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalHoursToAnswerCalls",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "totalReceivedCalls",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalAttendedCalls",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "attendedCallsPercentage",
+      "fieldType": "Double",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "avgDailyAttendedCalls",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "avgDailyAttendedCallsByExternal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "avgDailyAttendedCallsByExternalByDay",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "avgDailyAttendedCallsByInternal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "totalReceivedChats",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalAttendedChats",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalReceivedMails",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalAttendedMails",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "NumberOfHours",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

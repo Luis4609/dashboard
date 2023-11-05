@@ -1,0 +1,3 @@
+id;day;total_daily_received_chats;total_daily_conversation_chats_time_in_min;total_daily_attended_chats;total_daily_missed_chats;avg_daily_conversation_chats_time_in_min
+1;2023-11-05;14542;20289;10965;28093;29924.28
+2;2023-11-04;22999;15922;10964;9985;10420.68

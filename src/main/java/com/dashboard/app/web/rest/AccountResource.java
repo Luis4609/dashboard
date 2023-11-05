@@ -144,6 +144,7 @@ public class AccountResource {
     public void requestPasswordReset(@RequestBody String mail) {
         Optional<User> user = userService.requestPasswordReset(mail);
         if (user.isPresent()) {
+            //TODO updat DB with the reset pswd link
             mailService.sendPasswordResetMail(user.orElseThrow());
         } else {
             // Pretend the request has been successful to prevent checking which emails really exist
