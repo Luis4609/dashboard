@@ -13,7 +13,7 @@
           "pattern": "Your username is invalid."
         }
       },
-      "success": "<strong>Registre guardat!</strong> Si us plau, consulti el seu compte de correu electrònic per confirmar.",
+      "success": "<strong>Registre guardat!</strong> Si us plau, informeu al vostre administrador perquè aquest pugui activar el vostre compte.",
       "error": {
         "fail": "<strong>Error en registre!</strong> Si us plau, torni-ho a intentar més tard.",
         "userexists": "<strong>El nom d'usuari ja existeix!</strong> Si us plau, esculli'n un altre.",

@@ -38,9 +38,6 @@ public class DailyCallsService {
 
     private final DailyCallsMapper dailyCallsMapper;
 
-    @Autowired
-    private EntityManager entityManager;
-
     public DailyCallsService(DailyCallsRepository dailyCallsRepository, DailyCallsMapper dailyCallsMapper) {
         this.dailyCallsRepository = dailyCallsRepository;
         this.dailyCallsMapper = dailyCallsMapper;
@@ -171,8 +168,10 @@ public class DailyCallsService {
             "WHERE dc.day between '2023-11-01' AND '2023-11-30'\n" +
             "GROUP BY month(dc.day), year(dc.day)";
 
-        Query query = entityManager.createNativeQuery(MONTHLY_REPORT_QUERY, DailyCalls.class);
+        //        Query query = entityManager.createNativeQuery(MONTHLY_REPORT_QUERY, DailyCalls.class);
+        //
+        //        return query.getResultList();
 
-        return query.getResultList();
+        return dailyCallsRepository.findAll().stream().map(dailyCallsMapper::toDto).collect(toList());
     }
 }
