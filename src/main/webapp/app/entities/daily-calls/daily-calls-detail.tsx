@@ -23,7 +23,7 @@ export const DailyCallsDetail = () => {
     <Row>
       <Col md="8">
         <h2 data-cy="dailyCallsDetailsHeading">
-          <Translate contentKey="dashboardApp.dailyCalls.detail.title">DailyCalls</Translate>
+          <Translate contentKey="dashboardApp.dailyCalls.upload.title">DailyCalls</Translate>
         </h2>
         <dl className="jh-entity-details">
           <dt>

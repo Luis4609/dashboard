@@ -15,8 +15,10 @@
       "delete": {
         "question": "Êtes-vous certain de vouloir supprimer le Daily Calls {{ id }} ?"
       },
-      "detail": {
-        "title": "Daily Calls"
+      "upload": {
+        "title": "DailyCalls Télécharger des données depuis Excel",
+        "button": "Ajouter le fichier",
+        "infoText": "Téléchargez le fichier Excel avec les données des appels quotidiens"
       },
       "id": "ID",
       "day": "Day",

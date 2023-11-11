@@ -73,6 +73,16 @@ export const deleteEntity = createAsyncThunk(
   { serializeError: serializeAxiosError },
 );
 
+export const updateExcelEntity = createAsyncThunk(
+  'dailyCalls/update_excel',
+  async (file: File | number, thunkAPI) => {
+    const result = await axios.post<File>(`${apiUrl}/upload`, file);
+    thunkAPI.dispatch(getEntities({}));
+    return result;
+  },
+  { serializeError: serializeAxiosError },
+);
+
 // slice
 
 export const DailyCallsSlice = createEntitySlice({

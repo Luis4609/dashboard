@@ -15,8 +15,10 @@
       "delete": {
         "question": "Are you sure you want to delete Daily Calls {{ id }}?"
       },
-      "detail": {
-        "title": "Daily Calls"
+      "upload": {
+        "title": "DailyCalls Carregueu dades des d'Excel",
+        "button": "Afegeix un fitxer",
+        "infoText": "Carregueu el fitxer Excel amb les dades de les trucades diàries"
       },
       "id": "ID",
       "day": "Day",

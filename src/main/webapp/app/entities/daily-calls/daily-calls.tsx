@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { faSort, faSortDown, faSortUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
+import { useAppDispatch, useAppSelector } from 'app/config/store';
+import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
+import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.constants';
+import React, { useEffect, useState } from 'react';
+import { JhiItemCount, JhiPagination, TextFormat, Translate, getPaginationState } from 'react-jhipster';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button, Table } from 'reactstrap';
-import { Translate, TextFormat, getPaginationState, JhiPagination, JhiItemCount } from 'react-jhipster';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSort, faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
-import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
-import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.constants';
-import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
-import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { getEntities } from './daily-calls.reducer';
 
@@ -90,6 +90,8 @@ export const DailyCalls = () => {
     }
   };
 
+  const uploadExcelFile = (e: React.FocusEvent<HTMLInputElement>) => {};
+
   return (
     <div>
       <h2 id="daily-calls-heading" data-cy="DailyCallsHeading">
@@ -105,7 +107,7 @@ export const DailyCalls = () => {
             <Translate contentKey="dashboardApp.dailyCalls.home.createLabel">Create new Daily Calls</Translate>
           </Link>
           <Button
-            className="btn btn-primary jh-create-entity"
+            className="btn btn-primary"
             id="jh-upload-entity"
             tag={Link}
             to={`/daily-calls/upload`}
@@ -113,6 +115,7 @@ export const DailyCalls = () => {
             // size="sm"
             data-cy="entityUploadButton"
           >
+            <FontAwesomeIcon icon="file-arrow-up" />{' '}
             <Translate contentKey="dashboardApp.dailyCalls.home.uploadLabel">Upload excel file</Translate>
           </Button>
         </div>

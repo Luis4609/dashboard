@@ -15,8 +15,10 @@
       "delete": {
         "question": "Are you sure you want to delete Daily Calls {{ id }}?"
       },
-      "detail": {
-        "title": "Daily Calls"
+      "upload": {
+        "title": "DailyCalls Upload data from Excel",
+        "button": "Add file",
+        "infoText": "Upload the excel file with the Daily Calls data"
       },
       "id": "ID",
       "day": "Day",
