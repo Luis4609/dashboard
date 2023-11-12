@@ -18,19 +18,18 @@ export const DailyCallsUpload = () => {
 
   const handleFileChange = event => {
     // Get the selected file from the input
-    uploadExcel(event.target.files[0]);
+    // uploadExcel(event.target.files[0]);
   };
 
   const handleUpload = () => {
     // Check if a file is selected
-    if (!selectedFile) {
-      console.error('No file selected');
-      return;
-    }
-
-    // Create a FormData object to send the file
-    const formData = new FormData();
-    formData.append('file', selectedFile);
+    // if (!selectedFile) {
+    //   console.error('No file selected');
+    //   return;
+    // }
+    // // Create a FormData object to send the file
+    // const formData = new FormData();
+    // formData.append('file', selectedFile);
   };
 
   return (

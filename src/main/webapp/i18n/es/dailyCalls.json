@@ -20,6 +20,9 @@
         "button": "Añadir fichero",
         "infoText": "Subir un fichero excel con los datos relacionados con las Llamadas diarias"
       },
+      "metrics": {
+        "title": "Daily Calls Metrics"
+      },
       "id": "ID",
       "day": "Day",
       "totalDailyReceivedCalls": "Total Daily Received Calls",

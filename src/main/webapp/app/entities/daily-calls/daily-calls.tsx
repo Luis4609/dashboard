@@ -90,8 +90,6 @@ export const DailyCalls = () => {
     }
   };
 
-  const uploadExcelFile = (e: React.FocusEvent<HTMLInputElement>) => {};
-
   return (
     <div>
       <h2 id="daily-calls-heading" data-cy="DailyCallsHeading">
@@ -115,8 +113,18 @@ export const DailyCalls = () => {
             // size="sm"
             data-cy="entityUploadButton"
           >
-            <FontAwesomeIcon icon="file-arrow-up" />{' '}
             <Translate contentKey="dashboardApp.dailyCalls.home.uploadLabel">Upload excel file</Translate>
+          </Button>
+          <Button
+            className="btn btn-primary"
+            id="jh-upload-entity"
+            tag={Link}
+            to={`/daily-calls/metrics`}
+            // color="success"
+            // size="sm"
+            data-cy="metrics"
+          >
+            Go to metrics
           </Button>
         </div>
       </h2>

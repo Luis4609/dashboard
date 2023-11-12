@@ -8,12 +8,14 @@ import DailyCallsDetail from './daily-calls-detail';
 import DailyCallsUpdate from './daily-calls-update';
 import DailyCallsDeleteDialog from './daily-calls-delete-dialog';
 import DailyCallsUpload from './daily-calls-upload';
+import DailyCallsMetrics from './daily-calls-metrics';
 
 const DailyCallsRoutes = () => (
   <ErrorBoundaryRoutes>
     <Route index element={<DailyCalls />} />
     <Route path="new" element={<DailyCallsUpdate />} />
     <Route path="upload" element={<DailyCallsUpload />} />
+    <Route path="metrics" element={<DailyCallsMetrics />} />
     <Route path=":id">
       <Route index element={<DailyCallsDetail />} />
       <Route path="edit" element={<DailyCallsUpdate />} />

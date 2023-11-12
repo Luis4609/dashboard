@@ -20,6 +20,9 @@
         "button": "Add file",
         "infoText": "Upload the excel file with the Daily Calls data"
       },
+      "metrics": {
+        "title": "Daily Calls Metrics"
+      },
       "id": "ID",
       "day": "Day",
       "totalDailyReceivedCalls": "Total Daily Received Calls",

@@ -20,6 +20,9 @@
         "button": "Afegeix un fitxer",
         "infoText": "Carregueu el fitxer Excel amb les dades de les trucades diàries"
       },
+      "metrics": {
+        "title": "Daily Calls Metrics"
+      },
       "id": "ID",
       "day": "Day",
       "totalDailyReceivedCalls": "Total Daily Received Calls",
