@@ -42,32 +42,47 @@ export const Home = () => {
           <Card
             body
             className="my-2"
-            color="primary"
+            color="secondary"
             inverse
             style={{
               width: '18rem',
             }}
           >
-            <CardTitle tag="h5">Llamadas recibidas</CardTitle>
-            <CardText>Llamadas recibidas</CardText>
-            <Button>Go somewhere</Button>
+            <CardTitle tag="h5">20861</CardTitle>
+            <CardText>Llamadas perdidas</CardText>
+            {/* <Button>Go somewhere</Button> */}
           </Card>
-          <Col>
-            <Card
-              className="my-2"
-              color="primary"
-              outline
-              style={{
-                width: '18rem',
-              }}
-            >
-              <CardHeader>Header</CardHeader>
-              <CardBody>
-                <CardTitle tag="h5">Llamadas atendidas</CardTitle>
-                <CardText>Numero total de llamadas atendidas.</CardText>
-              </CardBody>
-            </Card>
-          </Col>
+        </Col>
+        <Col>
+          <Card
+            body
+            className="my-2"
+            color="success"
+            inverse
+            style={{
+              width: '18rem',
+            }}
+          >
+            <CardTitle tag="h5">85430</CardTitle>
+            <CardText>Llamadas recibidas</CardText>
+            {/* <Button>Go somewhere</Button> */}
+          </Card>
+        </Col>
+        <Col>
+          <Card
+            className="my-2"
+            color="primary"
+            outline
+            style={{
+              width: '18rem',
+            }}
+          >
+            <CardHeader>64569</CardHeader>
+            <CardBody>
+              <CardTitle tag="h5">Llamadas atendidas</CardTitle>
+              <CardText>Numero total de llamadas atendidas.</CardText>
+            </CardBody>
+          </Card>
         </Col>
       </Row>
     </>
