@@ -37,4 +37,8 @@ public class MainDashboardService {
     public Object getCallsTimeMetrics() {
         return dailyCallsRepository.getAvgTimeCallsMetrics();
     }
+
+    public Object getMainChatsMetrics() {
+        return dailyCallsRepository.getMainChatsMetrics();
+    }
 }

@@ -2,6 +2,7 @@ package com.dashboard.app.repository;
 
 import com.dashboard.app.domain.DailyCalls;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
@@ -41,4 +42,13 @@ public interface DailyCallsRepository extends JpaRepository<DailyCalls, Long>, J
         nativeQuery = true
     )
     Object getAvgTimeCallsMetrics();
+
+    @Query(
+        value = "SELECT SUM(total_daily_attended_chats), SUM(total_daily_received_chats)," +
+        "SUM(total_daily_missed_chats), SUM(total_daily_conversation_chats_time_in_min)\n" +
+        "FROM dashboard.daily_chats\n" +
+        "WHERE day between ? AND ?",
+        nativeQuery = true
+    )
+    Object getMainChatsMetrics(Date startDate, Date endDate);
 }
