@@ -104,6 +104,11 @@ export const DailyCalls = () => {
             &nbsp;
             <Translate contentKey="dashboardApp.dailyCalls.home.createLabel">Create new Daily Calls</Translate>
           </Link>
+          <Link to="/daily-calls/upload" className="btn btn-primary jh-create-entity" id="jh-create-entity" data-cy="entityCreateButton">
+            <FontAwesomeIcon icon="plus" />
+            &nbsp;
+            <Translate contentKey="dashboardApp.dailyCalls.home.createLabel">Create new Daily Calls</Translate>
+          </Link>
           <Button
             className="btn btn-primary"
             id="jh-upload-entity"

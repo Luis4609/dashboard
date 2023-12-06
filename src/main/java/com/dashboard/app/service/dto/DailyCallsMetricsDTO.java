@@ -1,12 +1,12 @@
 package com.dashboard.app.service.dto;
 
-public class DailyCallsMetrics {
+public class DailyCallsMetricsDTO {
 
     private int totalReceivedCall;
     private int totalAttendedCalls;
     private int totalLostCalls;
 
-    public DailyCallsMetrics() {}
+    public DailyCallsMetricsDTO() {}
 
     public int getTotalReceivedCall() {
         return totalReceivedCall;

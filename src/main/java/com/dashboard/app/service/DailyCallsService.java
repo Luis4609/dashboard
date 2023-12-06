@@ -1,14 +1,10 @@
 package com.dashboard.app.service;
 
-import static java.util.stream.Collectors.*;
-
 import com.dashboard.app.domain.DailyCalls;
 import com.dashboard.app.repository.DailyCallsRepository;
 import com.dashboard.app.service.dto.DailyCallsDTO;
-import com.dashboard.app.service.dto.DailyCallsMetrics;
+import com.dashboard.app.service.dto.DailyCallsMetricsDTO;
 import com.dashboard.app.service.mapper.DailyCallsMapper;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.Query;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -19,7 +15,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -185,10 +180,10 @@ public class DailyCallsService {
      *
      * @return the metrics
      */
-    public DailyCallsMetrics getMetrics() {
+    public DailyCallsMetricsDTO getMetrics() {
         Object[] result = dailyCallsRepository.getMainCallsMetrics();
 
-        DailyCallsMetrics dailyCallsMetrics = new DailyCallsMetrics();
+        DailyCallsMetricsDTO dailyCallsMetrics = new DailyCallsMetricsDTO();
         dailyCallsMetrics.setTotalReceivedCall(Integer.parseInt((String) result[0]));
         dailyCallsMetrics.setTotalAttendedCalls((Integer) result[1]);
         dailyCallsMetrics.setTotalLostCalls((Integer) result[2]);

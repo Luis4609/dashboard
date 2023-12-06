@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Translate } from 'react-jhipster';
 import { useNavigate } from 'react-router-dom';
 import { Button, Col, Form, FormGroup, FormText, Input, Label, Row } from 'reactstrap';
-import { updateExcelEntity } from './daily-calls.reducer';
+import { uploadExcelEntity } from './daily-calls.reducer';
 
 export const DailyCallsUpload = () => {
   const dispatch = useAppDispatch();
@@ -13,23 +13,23 @@ export const DailyCallsUpload = () => {
   const handleSubmit = (e: any) => {};
 
   const uploadExcel = () => {
-    dispatch(updateExcelEntity(file));
+    dispatch(uploadExcelEntity(file));
   };
 
-  const handleFileChange = event => {
-    // Get the selected file from the input
-    // uploadExcel(event.target.files[0]);
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setFile(e.target.files[0]);
+    }
   };
 
   const handleUpload = () => {
-    // Check if a file is selected
-    // if (!selectedFile) {
-    //   console.error('No file selected');
-    //   return;
-    // }
-    // // Create a FormData object to send the file
-    // const formData = new FormData();
-    // formData.append('file', selectedFile);
+    // eslint-disable-next-line no-console
+    console.log('Uploading file...');
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    dispatch(uploadExcelEntity(file));
   };
 
   return (

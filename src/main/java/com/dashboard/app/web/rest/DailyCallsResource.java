@@ -5,7 +5,7 @@ import com.dashboard.app.service.DailyCallsQueryService;
 import com.dashboard.app.service.DailyCallsService;
 import com.dashboard.app.service.criteria.DailyCallsCriteria;
 import com.dashboard.app.service.dto.DailyCallsDTO;
-import com.dashboard.app.service.dto.DailyCallsMetrics;
+import com.dashboard.app.service.dto.DailyCallsMetricsDTO;
 import com.dashboard.app.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -209,6 +209,12 @@ public class DailyCallsResource {
             .build();
     }
 
+    /**
+     * Upload excel file response entity.
+     *
+     * @param file the file
+     * @return the response entity
+     */
     @PostMapping("/daily-calls/upload")
     public ResponseEntity<String> uploadExcelFile(@RequestParam MultipartFile file) {
         try {
@@ -222,13 +228,23 @@ public class DailyCallsResource {
             .build();
     }
 
+    /**
+     * Generate monthly calls report response entity.
+     *
+     * @return the response entity
+     */
     @GetMapping("/monthly-calls")
     public ResponseEntity<List<DailyCallsDTO>> generateMonthlyCallsReport() {
         return ResponseEntity.ok().body(dailyCallsService.getMonthlyCalls());
     }
 
+    /**
+     * Gets daily calls metrics.
+     *
+     * @return the daily calls metrics
+     */
     @GetMapping("/daily-calls/metrics")
-    public ResponseEntity<DailyCallsMetrics> getDailyCallsMetrics() {
+    public ResponseEntity<DailyCallsMetricsDTO> getDailyCallsMetrics() {
         return ResponseEntity.ok().body(dailyCallsService.getMetrics());
     }
 }

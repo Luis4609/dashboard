@@ -54,10 +54,11 @@ public interface DailyCallsRepository extends JpaRepository<DailyCalls, Long>, J
 
     @Query(
         value = """
-        SELECT SUM(total_daily_received_calls), SUM(total_daily_attended_calls), SUM(total_daily_missed_calls)
+        SELECT SUM(total_daily_received_calls), SUM(total_daily_attended_calls), SUM(total_daily_missed_calls),
+        SUM(total_daily_attended_calls_external_agent), SUM(total_daily_attended_calls_internal_agent)
         FROM dashboard.daily_calls
-        WHERE daily_calls.day between DATE(?1) AND CURRENT_DATE()""",
+        WHERE daily_calls.day between ?1 AND ?2""",
         nativeQuery = true
     )
-    Object getDailyCallMetricsByDate(Date start);
+    Object getDailyCallMetricsByDate(Date start, Date end);
 }
