@@ -1,6 +1,7 @@
 package com.dashboard.app.service;
 
 import com.dashboard.app.repository.DailyCallsRepository;
+import com.dashboard.app.repository.DailyChatsRepository;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,13 +12,16 @@ public class MainDashboardService {
 
     private final DailyCallsRepository dailyCallsRepository;
 
+    private final DailyChatsRepository dailyChatsRepository;
+
     /**
      * Instantiates a new Main dashboard service.
      *
      * @param dailyCallsRepository the daily calls repository
      */
-    public MainDashboardService(DailyCallsRepository dailyCallsRepository) {
+    public MainDashboardService(DailyCallsRepository dailyCallsRepository, DailyChatsRepository dailyChatsRepository) {
         this.dailyCallsRepository = dailyCallsRepository;
+        this.dailyChatsRepository = dailyChatsRepository;
     }
 
     /**
@@ -39,6 +43,6 @@ public class MainDashboardService {
     }
 
     public Object getMainChatsMetrics() {
-        return dailyCallsRepository.getMainChatsMetrics();
+        return dailyChatsRepository.getMainChatsMetrics();
     }
 }

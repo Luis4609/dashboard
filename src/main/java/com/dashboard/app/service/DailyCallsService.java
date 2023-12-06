@@ -5,6 +5,7 @@ import static java.util.stream.Collectors.*;
 import com.dashboard.app.domain.DailyCalls;
 import com.dashboard.app.repository.DailyCallsRepository;
 import com.dashboard.app.service.dto.DailyCallsDTO;
+import com.dashboard.app.service.dto.DailyCallsMetrics;
 import com.dashboard.app.service.mapper.DailyCallsMapper;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
@@ -157,7 +158,11 @@ public class DailyCallsService {
         workbook.close();
     }
 
-    //get monthly summary by Date Range
+    /**
+     * TODO
+     * get monthly summary by Date Range
+     * @return
+     */
     public List<DailyCallsDTO> getMonthlyCalls() {
         final String MONTHLY_REPORT_QUERY =
             "SELECT dc.id, DATE_FORMAT(dc.day, '%Y-%m') AS day, SUM(dc.total_daily_received_calls), SUM(dc.total_daily_attended_calls), SUM(dc.total_daily_missed_calls), SUM(dc.total_daily_received_calls_external_agent),\n" +
@@ -172,6 +177,22 @@ public class DailyCallsService {
         //
         //        return query.getResultList();
 
-        return dailyCallsRepository.findAll().stream().map(dailyCallsMapper::toDto).collect(toList());
+        return dailyCallsRepository.findAll().stream().map(dailyCallsMapper::toDto).collect(Collectors.toList());
+    }
+
+    /**
+     * Gets metrics.
+     *
+     * @return the metrics
+     */
+    public DailyCallsMetrics getMetrics() {
+        Object[] result = dailyCallsRepository.getMainCallsMetrics();
+
+        DailyCallsMetrics dailyCallsMetrics = new DailyCallsMetrics();
+        dailyCallsMetrics.setTotalReceivedCall(Integer.parseInt((String) result[0]));
+        dailyCallsMetrics.setTotalAttendedCalls((Integer) result[1]);
+        dailyCallsMetrics.setTotalLostCalls((Integer) result[2]);
+
+        return dailyCallsMetrics;
     }
 }

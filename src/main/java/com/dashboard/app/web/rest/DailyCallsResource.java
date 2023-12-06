@@ -5,6 +5,7 @@ import com.dashboard.app.service.DailyCallsQueryService;
 import com.dashboard.app.service.DailyCallsService;
 import com.dashboard.app.service.criteria.DailyCallsCriteria;
 import com.dashboard.app.service.dto.DailyCallsDTO;
+import com.dashboard.app.service.dto.DailyCallsMetrics;
 import com.dashboard.app.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -224,5 +225,10 @@ public class DailyCallsResource {
     @GetMapping("/monthly-calls")
     public ResponseEntity<List<DailyCallsDTO>> generateMonthlyCallsReport() {
         return ResponseEntity.ok().body(dailyCallsService.getMonthlyCalls());
+    }
+
+    @GetMapping("/daily-calls/metrics")
+    public ResponseEntity<DailyCallsMetrics> getDailyCallsMetrics() {
+        return ResponseEntity.ok().body(dailyCallsService.getMetrics());
     }
 }
